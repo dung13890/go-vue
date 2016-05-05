@@ -1,11 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <ui-button>test</ui-button>
   </div>
 </template>
 
 <script>
+import { UiButton } from 'keen-ui'
+
 export default {
+  components: {
+    UiButton,
+  },
   data () {
     return {
       // note: changing this line won't causes changes
@@ -14,7 +19,7 @@ export default {
       // its initial state.
       msg: 'Hello World!'
     }
-  }
+  },
 }
 </script>
 
