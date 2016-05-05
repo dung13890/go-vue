@@ -1,21 +1,60 @@
 <template>
   <div id="app">
-    <hello></hello>
-    <ui-button :color="danger">test2</ui-button>
+    <Sidebar></Sidebar>
+    <Navbar></Navbar>
+    <ui-alert type="success">成功了！！！</ui-alert>
+    <ui-menu :options="menuOptions"></ui-menu>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-import { UiButton } from 'keen-ui'
+import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
+
+let menuOptions = [
+  {
+    id: 'edit',
+    text: 'Edit',
+    icon: 'edit',
+    keyboardShortcut: 'Ctrl+E'
+  }, {
+    id: 'duplicate',
+    text: 'Duplicate',
+    icon: 'content_copy',
+    keyboardShortcut: 'Ctrl+D'
+  }, {
+    id: 'share',
+    text: 'Share',
+    icon: 'share',
+    keyboardShortcut: 'Ctrl+Shift+S',
+    disabled: true
+  }, {
+    type: 'divider'
+  }, {
+    id: 'delete',
+    text: 'Delete',
+    icon: 'delete',
+    keyboardShortcut: 'Del'
+  }
+]
 
 export default {
+  data() {
+    return {
+      showSidebar: false,
+      currentComponent: menu[0],
+      menu,
+      menuOptions,
+    }
+  },
   components: {
-    Hello,
-    UiButton,
+    Navbar,
+    Sidebar,
   }
 }
 </script>
 
 <style>
+@import './assets/css/material-icons.css';
+@import './assets/css/keen-ui.min.css';
 </style>
