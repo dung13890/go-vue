@@ -1,5 +1,4 @@
 <template>
-  <My-Header></My-Header>
   <main>
     <div class="container">
       <div id="app" class="row">
@@ -41,32 +40,26 @@
       </div>
     </div>
   </main>
-  <My-Footer><My-Footer>
 </template>
 
 <script>
-import MyHeader from './components/MyHeader'
-import MyFooter from './components/MyFooter'
-
-$(document).ready(function() {
-  $('.scrollspy').scrollSpy()
-})
-
 export default {
-  components: {
-    MyHeader,
-    MyFooter,
-  }
+  props: {
+    tocs: {
+      type: Array,
+      default: () => [{text: 'index', url: '/'}],
+    },
+  },
+  created() {
+    $(document).ready(function() {
+      $('.scrollspy').scrollSpy()
+    })
+  },
 }
 </script>
 
 <style>
-header, main, footer {
-  padding-left: 240px;
-}
-@media only screen and (max-width : 992px) {
-  header, main, footer {
-    padding-left: 0;
-  }
+blockquote {
+  border-left: 5px solid #009688;
 }
 </style>
