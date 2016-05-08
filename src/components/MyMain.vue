@@ -28,7 +28,7 @@
             <p>Content </p>
           </div>
         </div>
-        <div class="col hide-on-small-only m3 l2">
+        <div id="my-toc" class="col hide-on-small-only m3 l2">
           <div class="toc-wrapper pin-top">
             <ul class="section table-of-contents">
               <li><a href="#introduction">Introduction</a></li>
