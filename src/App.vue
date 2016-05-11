@@ -1,6 +1,7 @@
 <template>
   <!-- My-Header></My-Header>
   <Vue-Helmet title="sss"><Vue-Helmet -->
+  <p>sssssssssssssss</p>
   <vue-markdown :source="out"><vue-markdown>
   <!-- main>
     <div class="container">
@@ -50,7 +51,7 @@
 <script>
 import MyHeader from './components/MyHeader'
 import MyFooter from './components/MyFooter'
-import VueMarkdown from 'vue-markdown'
+import VueMarkdown from 'vue-markdown/dist/vue-markdown.common.js'
 import VueHelmet from 'vue-helmet'
 
 console.log(VueMarkdown)
